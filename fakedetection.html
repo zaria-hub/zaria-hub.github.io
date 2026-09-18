@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mate name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title>AI-Generated Media Detection System</title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 900px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+            h1.name{
+                font-size:clamp(10px, 6vw, 30px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+           
+           
+         </style>
+    </head>
+   
+    <body>
+
+         <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        <div class="secound-container">
+           <h2 class="name cards">AI-Generated Media Detection System — Multi-Modal Deepfake and Synthetic Content Detector </h2>
+        </div>
+        <div>
+            <p>  
+                Designed and built an end-to-end deepfake detection system combining computer vision, 
+                transfer learning, and full-stack deployment — covering both image and video modalities with independently trained, 
+                purpose-built models, backed by an iterative, evidence-driven development process rather than a single one-shot training run.
+            </p>
+            <h1>Key Features:</h1>
+            <div class="i-box">
+                <ul>
+                    <li>
+                         <strong>Diagnosis & Root-Cause Analysis:</strong> After deploying a first version (frozen CLIP embeddings + linear classifier, trained solely on DFDC) 
+                         that scored well on held-out validation data (Macro F1 ≈ 0.80) but failed catastrophically on personal test photos — misclassifying everything as "fake" — 
+                         traced the failure to a genuine distribution shift rather than a class-imbalance artifact. 
+                         The model had learned dataset-specific fingerprints (DFDC's video compression profile, face-cropping pipeline) instead of generalizable manipulation cues.
+                    </li>
+                    <li>
+                         <strong>Dataset Expansion for Domain Robustness:</strong> Sourced Celeb-DF-v2 (a face-swap dataset built from an entirely different actor pool and pipeline) as raw video, 
+                         then re-extracted faces in-house using MTCNN with fixed, reproducible parameters (image_size=224, margin=40) — the same exact parameters later enforced at inference time, 
+                         closing the preprocessing mismatch that caused the original failure. Merged the new data with DFDC only after verifying zero video-level leakage between train and validation splits. 
+                         Worked through real-world engineering friction along the way: disk space exhaustion, dependency conflicts across numpy/pandas/torchvision/transformers, 
+                         and a mid-project data-loss scare that was resolved once the underlying storage location was correctly identified.
+                    </li>
+                    <li>
+                         <strong>Architecture Upgrade — from Frozen Features to Fine-tuning:</strong> Replaced the frozen-CLIP approach with genuine fine-tuning of a pretrained ViT-based deepfake classifier 
+                         (dima806/deepfake_vs_real_image_detection), freezing the majority of the backbone and unfreezing only the final transformer blocks plus classification head. 
+                         Trained on the merged, leak-checked dataset with a class-weighted loss to address label imbalance. 
+                         Final result: Macro F1 = 0.8136, with improved video-level accuracy after majority-vote aggregation across frames. 
+                         Exported the model in its full, portable format (config.json, model.safetensors, preprocessor_config.json) rather than raw weights alone, ensuring reliable reload for deployment.
+                    </li>
+                    <li>
+                         <strong>Backend Integration:</strong> Extended a FastAPI service with two fully independent inference paths — /predict_image (unchanged CLIP + linear-classifier pipeline) 
+                         and /predict_video (the new fine-tuned ViT model), with MTCNN preprocessing in the video path locked to the exact parameters 
+                         used during training — the single most important fix carried over from the root-cause diagnosis.
+                    </li>
+                </ul>
+            </div>
+         
+           
+            <div class="container">
+                 <iframe 
+                     width="100%" 
+                     height="400" 
+                     src="https://www.youtube.com/embed/oXFzblXEPhU" 
+                     title="AI-Generated Media Detection System "
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen>
+                </iframe>
+            </div>
+            <h4>
+                <strong>Tech Stack:</strong> Python, PyTorch, Hugging Face Transformers, CLIP (ViT-B/32), fine-tuned Vision Transformer,
+                 MTCNN (facenet-pytorch), FastAPI, OpenCV, scikit-learn (metrics), Kaggle/HuggingFace data pipelines
+            </h4>    
+        </div>
+        
+        
+     
+        
+        
+        
+    </body>
+</html>

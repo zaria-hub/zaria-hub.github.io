@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mata name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title>Education</title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 40px;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 600px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+          
+            h5.name{
+                font-size:clamp(10px, 3vw, 20px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: var(--teal3);
+            }
+            .thesis-box{
+              border-left: 4px solid var(--teal2-b);
+              padding-left: 20px; margin-top: 18px;
+                }
+           
+         </style>
+    </head>
+   
+    <body>
+
+        <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        <h1 class="name ">Education</h1>
+        <div class="secound-container">
+            
+            <h2 class="name cards">Bachelor's Degree in Computer Science </h2>
+            <p>University Abbas Laghrour Khenchela · 2021–2024 · Khenchela, Algeria</p>
+              <iframe src="docs/leassance (1).pdf" width="100%" height="400px"></iframe>
+        
+            <h2 class="name cards">Master's Degree in Artificial Intelligence </h2>
+            <p>University Abbas Laghrour Khenchela · 2024–2026 · Khenchela, Algeria</p>
+            <div class="thesis-box">
+                <h3>Thesis: Multi-Agent Reinforcement Learning for Traffic Signal Control</h3>
+                <ul>
+                    <li>Designed a multi-agent RL framework for adaptive, real-time traffic signal control.</li>
+                    <li>Benchmarked DQN, Double DQN, and Dueling DQN against a fixed-time controller.</li>
+                    <li>Identified the most efficient policy for reducing congestion and intersection wait time.</li>
+                </ul>
+            </div>
+            <iframe src="docs/MasterDegree.pdf" width="100%" height="400px"></iframe>
+        </div>
+        
+        
+     
+        
+        
+        
+    </body>
+</html>

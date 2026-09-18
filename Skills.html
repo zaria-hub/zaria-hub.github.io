@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mata name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title>Skills</title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 600px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+            h1.name{
+                font-size:clamp(10px, 6vw, 30px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            h5.name{
+                font-size:clamp(10px, 3vw, 20px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: var(--teal3);
+            }
+            .lang-row{ display:flex; align-items:center; gap:16px; margin-bottom:14px; font-family:'IBM Plex Mono'; font-size:13px; }
+            .lang-row .lang-name{ width:90px; color: var(--text); }
+            .lang-dots{ display:flex; gap:5px; }
+            .lang-dots span{ width:9px; height:9px; border-radius:50%; background: var(--panel-line); }
+            .lang-dots span.on{ background: var( --amber); }
+           
+         </style>
+    </head>
+   
+    <body>
+
+       <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        <h1 class="name ">Skills</h1>
+        <div class="secound-container">
+          
+            <h2 class="name cards">💻 Programming </h2>
+            <h5 class="name ">Python, C++</h5> 
+            <h2 class="name cards">🤖 AI / Machine Learning </h2>
+            <h5 class="name ">
+                Reinforcement Learning (DQN, Double DQN, Dueling DQN) 
+                ,Deep Learning ,Classification ,Regression ,Clustering
+            </h5> 
+            <h2 class="name cards">🖧 IoT & Embedded Systems </h2>
+            <h5 class="name ">
+                Sensor Integration ,Real-Time Monitoring,MQTT,Arduino,ESP32,
+                 Multi-sensor systems (ultrasonic, temp, flame, humidity) ,Real-Time Dashboards
+            </h5> 
+            <h2 class="name cards">🪛 Tools & Frameworks </h2>
+            <h5 class="name ">PyTorch ,TensorFlow ,Flask ,Git ,GitHub ,Visual Studio ,VS Code</h5> 
+            <h2 class="name cards">🔡 Languages</h2>
+         <div class="lang-row">
+             <h5  class="name">Arabic</h5>
+             <div class="lang-dots">
+                <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span>
+             </div>
+             <span class="mono" style="color:var(--muted); font-size:12px;">native</span>
+         </div>
+         <div class="lang-row">
+             <h5  class="name">English</h5>
+             <div class="lang-dots">
+                <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span ></span><span ></span><span></span>
+             </div>
+             <span class="mono" style="color:var(--muted); font-size:12px;">B1 intermediate</span>
+        </div>
+           
+        
+        </div>
+        
+        
+     
+        
+        
+        
+    </body>
+</html>

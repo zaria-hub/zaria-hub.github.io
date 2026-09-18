@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mata name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title> Brain Tumor Segmentation </title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 900px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+            h1.name{
+                font-size:clamp(10px, 6vw, 30px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+           
+           
+         </style>
+    </head>
+   
+    <body>
+
+         <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        <div class="secound-container">
+           <h2 class="name cards">Brain Tumor Segmentation – Medical Image AI System</h2>
+        </div>
+        <div>
+            <p> 
+                Designed and built an end-to-end deep learning pipeline for automatic brain tumor detection and segmentation in MRI scans, 
+                combining a trained convolutional neural network with a full-stack web interface to enable real-time visual diagnosis support from image upload to result visualization.
+            </p>
+            <h1>Key Features:</h1>
+            <p>
+               <strong>Segmentation Model:</strong> U-Net architecture with a pretrained ResNet34 encoder (transfer learning from ImageNet)
+               trained on labeled MRI slices to pixel-wise classify tumor vs. healthy tissue
+            </p>
+            <p>
+               <strong>Custom Training Pipeline:</strong> combined BCE + Dice loss to handle severe class imbalance (tumors occupy a small fraction of each scan),
+               with train/validation split, data augmentation (flips, rotation, brightness), and automatic best-checkpoint saving based on validation Dice score
+            </p>
+            <p>
+                <strong>Model Evaluation:</strong> tracked Dice coefficient and IoU across training, achieving 0.84 validation Dice score on held-out data
+            </p>
+            <p>
+                <strong>Inference API:</strong> Flask backend serving the trained model, accepting uploaded MRI images and returning predicted tumor masks, 
+                contour overlays, affected area (px/%), and mean model confidence as JSON
+            </p>
+            <p>
+                <strong>Custom web interface:</strong> hand-built HTML/CSS/JS frontend (radiology-viewer inspired dark UI) with drag-and-drop image upload, 
+                live scan-animation feedback during inference, toggleable original/overlay view, and one-click download of predicted masks
+            </p>
+            <p>
+                <strong>Cloud-to-local ML workflow:</strong> trained on GPU via Google Colab, exported the checkpoint, 
+                and deployed inference locally with a lightweight CPU-only runtime for practical, low-cost usage
+            </p>
+            <p>
+                <strong>Full-stack ownership:</strong> from raw labeled dataset and PyTorch model architecture, through the loss/metrics design, 
+                to the API layer and browser-facing product — demonstrating applied ML engineering beyond notebook-only prototyping
+            </p>
+            <div class="container">
+                 <iframe 
+                     width="100%" 
+                     height="400" 
+                     src="https://www.youtube.com/embed/owD86FjG2vQ" 
+                     title="Brain Tumor Segmentation – Medical Image AI System"
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen>
+                </iframe>
+                </div>
+            <h4>
+                <strong>Tech Stack:</strong> Python, PyTorch, segmentation-models-pytorch (U-Net + ResNet34), OpenCV, NumPy, Flask, 
+                HTML/CSS/JavaScript, Google Colab (CUDA training), REST API design, Dice/BCE loss, Dice & IoU evaluation metrics
+            </h4>    
+        </div>
+        
+        
+     
+        
+        
+        
+    </body>
+</html>

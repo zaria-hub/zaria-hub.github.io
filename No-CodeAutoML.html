@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mate name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title>No-Code AutoML</title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 900px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+            h1.name{
+                font-size:clamp(10px, 6vw, 30px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+          
+           
+         </style>
+    </head>
+   
+    <body>
+        <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        
+        <div class="secound-container">
+           <h2 class="name cards">No-Code Data Mining & Machine Learning Platform </h2>
+        </div>
+        <div>
+            <p>  Designed and developed a no-code web application that enables users to perform end-to-end data mining and machine learning workflows without writing a single line of code.
+                 Built with Streamlit, scikit-learn, Pandas, and Seaborn, the platform guides users through a structured pipeline: 
+                uploading datasets (CSV/Excel), exploring data through interactive visualizations and statistics, preprocessing (missing value handling, encoding, and scaling),
+                 training machine learning models, and reviewing performance results — all through an intuitive interface.
+            </p>
+           
+            <h1>Key Features:</h1>
+            <div class="i-box">
+                <ul>
+                     <li>Upload and preview CSV/Excel datasets instantly</li>
+                     <li>Automated exploratory data analysis (EDA) with histograms and correlation heatmaps</li>
+                     <li>Flexible preprocessing options: missing value imputation, categorical encoding, and feature scaling</li>
+                     <li>Support for multiple machine learning tasks: Classification, Regression, and Clustering</li>
+                     <li>Multiple algorithms available, including Logistic Regression, Random Forest, Linear Regression, K-Means, and DBSCAN</li>
+                     <li>Real-time model evaluation with accuracy scores, confusion matrices, RMSE, R², and silhouette scores</li>
+                </ul>
+            </div>
+            <div class="container">
+               <iframe 
+                     width="100%" 
+                     height="400" 
+                     src="https://www.youtube.com/embed/D1TWMByrxTY" 
+                     title="No-Code AutoML Platform Demo"
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen>
+                </iframe>
+            </div>
+            <h4><strong>Tech Stack:</strong> Python, Streamlit, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn</h4>    
+        </div>
+        
+        
+     
+        
+        
+        
+    </body>
+</html>

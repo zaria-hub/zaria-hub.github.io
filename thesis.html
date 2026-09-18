@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mata name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title>thesis</title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 900px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+            h1.name{
+                font-size:clamp(10px, 6vw, 30px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+           
+           
+         </style>
+    </head>
+   
+    <body>
+
+         <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        <div class="secound-container">
+           <h2 class="name cards">Comparative Study of DQN, Double DQN, and Dueling DQN with Parameter Sharing for Adaptive Traffic Signal Control in Urban Multi-Intersection Environments </h2>
+        </div>
+        <div>
+            <h1>Central Research Question:</h1>
+            <div class="i-box">
+                <p>   Among Classical DQN, Double DQN, and Dueling DQN ( all equipped with Prioritized Experience Replay and applied within a unified multi-intersection framework ) ,which architecture delivers the best adaptive traffic signal control performance under high-demand urban conditions, and what are the algorithmic reasons for the observed differences?</p>
+            </div>
+            
+            <h1>Proposed Solution (Overview)</h1>
+             <div class="i-box">
+                <p>A rigorous, fair, and comprehensive comparative evaluation of three value-based DRL architectures applied to adaptive traffic signal control , designed so that any observed difference in performance is attributable exclusively to architectural distinctions.</p>
+            </div>
+            <div class="container">
+                 <img src="images/thesis-img/QvsDQL.png" alt="Comparison chart: Q-values vs Double Q-Learning"  class="img" />
+            </div>
+        </div>
+        
+        <div class="wrap">
+            <svg width=100% viewBox="0 0 900 400" class="box">
+
+            <line x1="160" y1="200" x2="650" y2="200" stroke="var(--amber1-b)" stroke-width="4" class="loop-path" /> 
+            <line x1="160" y1="150" x2="650" y2="150" stroke="var(--amber1-b)" stroke-width="4" class="loop-path" />
+              
+            
+             <rect x="60" y="140" width="10" height="20" fill="var(--amber)" rx="5" class="loop-path">
+                 <animatemotion dur="4s" path="
+                                          M 60,1 
+                                          L 60,50
+                                          L 600,50 
+                                          L 600,1
+                                          L 600,1
+                                    
+                                         Z"  repeatCount="indefinite" />
+            </rect> 
+            <rect x="20" y="140" width="10" height="20" fill="var(--amber)" rx="5" class="loop-path">
+              <animatemotion dur="4s" path="
+                                          M 90,50
+                                          L 90,130
+                                          L 300,130
+                                          L 90,130    
+                                         Z"  repeatCount="indefinite" />                       
+            </rect>
+
+            <rect x="25" y="120" width="150" height="100" fill="black" rx="90" stroke ="var(--amber1-b)"stroke-width="2" /> 
+            <text x="100" y="173" text-anchor="middle" font-size="16" fill="white">Agent</text>
+            <text x="100" y="300" text-anchor="middle" font-size="16" fill="white">Save transactions</text>
+            <rect x="620" y="120" width="150" height="100" fill="black" rx="30" stroke ="var(--amber1-b)" stroke-width="2" />  
+            <text x="695" y="176" text-anchor="middle" font-size="16" fill="white">Environment</text>
+
+           
+            <text x="400" y="135" text-anchor="middle" font-size="16" fill="white">State (s) , Reward (r)</text>
+
+            <text x="400" y="190" text-anchor="middle" font-size="16" fill="white">switch or keep</text>
+           
+            <rect x="250" y="35" width="300" height="50" fill="black" rx="50" stroke ="var(--amber)" stroke-width="2" />
+            <text x="400" y="65" text-anchor="middle" font-size="20" fill="white">DQN</text>
+
+            
+
+            <rect x="300" y="230" width="70" height="90" fill="black" ry="30" stroke ="var(--amber1-b)" stroke-width="2" />  
+            <text x="335" y="280" text-anchor="middle" font-size="20" fill="white">Buffer</text>
+
+        </svg>
+        </div>
+     
+        
+        <iframe src="docs/ThesisRima.pdf" width="100%" height="900px"></iframe> 
+        
+    </body>
+</html>

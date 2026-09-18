@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mata name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title>AI-Powered Quiz Generator</title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 900px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+            h1.name{
+                font-size:clamp(10px, 6vw, 30px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+           
+           
+         </style>
+    </head>
+   
+    <body>
+
+         <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        <div class="secound-container">
+           <h2 class="name cards">AI-Powered Quiz Generator </h2>
+        </div>
+        <div>
+            <p> 
+                Built an intelligent quiz generation engine that automatically creates high-quality educational quizzes from any given text,
+                 powered by Groq's LLM API (Llama 3.3 70B). The system uses carefully engineered prompts to ensure generated questions are strictly grounded in the source content
+                , with configurable difficulty levels and question formats to suit different learning needs.
+            </p>
+            <h1>Key Features:</h1>
+            <div class="i-box">
+             <ul>
+                <li>Generates customizable quizzes with adjustable number of questions and difficulty (Easy, Medium, Hard)</li>
+                <li>Supports multiple question formats like Multiple Choice, True/False, Fill in the Blank, or a Mixed set</li>
+                <li>Strict content-grounding rules ensure every question and correct answer is directly supported by the source text — preventing hallucinated content</li>
+                <li>Structured prompt engineering to guarantee consistent, parseable output format</li>
+                <li>Plausible, non-trivial distractors for MCQs to improve quiz quality and learning value</li>
+             </ul> 
+            </div>
+            <div class="container">
+                  <iframe 
+                     width="100%" 
+                     height="400" 
+                     src="https://www.youtube.com/embed/uC3yNK57Crg" 
+                     title="AI-Powered Quiz Generator"
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen>
+                </iframe>
+                </div>
+            <h4><strong>Tech Stack:</strong> Python, Groq API (LLM inference), Prompt Engineering, REST API integration</h4>    
+        </div>
+        
+        
+     
+        
+        
+        
+    </body>
+</html>

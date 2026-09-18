@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> projects </title>
+     <link rel="stylesheet" href="style.css"/>
+     <script src="script.js" defer></script>
+      <style>
+       :root{
+            --background-color-body: #f5f5f5;
+            --text-color: #333;
+            --h1-color: #2c3e50;
+            --card-background:#ffffff;
+            --button-background: #3498db;
+            --button-color: #ffffff;
+            --state:#fd9503;
+        }
+        body{
+            
+            text-align: center;
+            
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0; 
+            gap: 10px;        
+        }
+        .container2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:center;
+            margin: 5px 0; 
+            gap: 10px;  
+        }
+          
+        h1.name{
+            color: var(--h1-color);
+            font-size: large;
+        }
+        .cards{
+              background:var(--bgcards); 
+                border-radius:20px;
+                text-align:center;
+                justify-content: center;
+                padding :10px;
+                width: 100%;
+                max-width: 900px;
+                margin: 0 auto; 
+                 box-sizing: border-box;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:  white;
+                border-style:double;
+                border-color: var(--teal2-b);
+                border-width: 2px;
+        }
+        .state{
+            background: var(  --amber1);
+            border-radius: 80px;
+            width: 70px;
+            height: 70px;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+        }
+        .stateAnim:hover{
+             transform: scale(1.1);
+        }
+        
+        .card-thumb{
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            border: 3px;
+            object-fit: cover;
+             }
+        .card-transform:hover{
+            transform: translateY(-1px) scale(1.001);
+            box-shadow: 0px 25px 50px rgba(0,0,0,25);
+            }
+      
+        @keyframes situation{
+            from {  border-radius: 80px;
+                    color: var(--text-color);
+                    width: 70px;
+            }
+            to {  border-radius: 10px;
+                  color:transparent;
+                  width: 90px;
+                }
+        }
+       
+      </style>
+    </head>
+    <body>
+          <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        <h1 >My Projects</h1>
+        
+        <div class="secound-container">
+             <a href="thesis.html">
+               <div class="cards card-transform">
+                   <div class="container2 "> 
+                        <img src="images/thesis-img/traffic.png" alt="Traffic signal simulation preview" class="card-thumb">
+                        <div>  
+                           <h2> thesis</h2>
+                           <p>Multi-Agent RL for Traffic Signal Control</p>
+                        </div>  
+                        <div class="state stateAnim "  >finished</div>
+                   </div>    
+                </div>
+             </a>
+        </div>
+       
+        <div class="secound-container">
+            <a href="SmartPoultryHouse.html">
+                <div class="cards card-transform">
+                    <div class="container2 ">
+                        <img src="images/smartpoultryhouse/designpicture.png" alt="Smart Poultry House preview" class="card-thumb">
+                        <div>  
+                            <h2> Smart Poultry House</h2>
+                            <p>IoT Smart Farming</p>
+                        </div>  
+                        <div class="state stateAnim " >in progress</div>
+                    </div>
+                </div>
+            </a>
+        </div>   
+        
+        <div class="secound-container">
+           <a href="CityEnergy.html"> 
+                <div class="cards card-transform">
+                    <div class="container2">
+                         <img src="images/smartcity/energy.png" alt="Smart City Energy Consumption Prediction preview" class="card-thumb">
+                         <div>
+                            <h2>Smart City Energy Consumption Prediction</h2>
+                            <p>Predicting energy usage in smart cities</p>
+                         </div> 
+                        <div class="state stateAnim" >finished</div>  
+                   </div> 
+                </div>
+            </a>
+        </div>
+       
+        <div class="secound-container"> 
+           <a href="No-CodeAutoML.html" >
+                <div class="cards card-transform">
+                    <div class="container2">
+                        <img src="images/NoCodeAuto/code.png" alt="No-Code AutoML preview" class="card-thumb">
+                           <div>
+                               <h2>No-Code Data Mining & Machine Learning Platform</h2>
+                               <p>A web platform for automated machine learning without coding</p>
+                           </div> 
+                           <div class="state stateAnim" >finished</div>  
+                    </div> 
+                </div>
+            </a>  
+        </div>
+
+        <div class="secound-container">
+            <a href="ExpertSystem.html">  
+                <div class="cards card-transform">
+                   <div class="container2">
+                        <img src="images/expertsystem/image.png" alt="Desktop Expert System preview" class="card-thumb">
+                        <div>
+                           <h2>Desktop Expert System for Disease Diagnosis</h2>
+                           <p>A desktop application for automated disease diagnosis</p>
+                        </div> 
+                        <div class="state stateAnim" >finished</div>  
+                    </div> 
+                </div>
+            </a>
+        </div>
+       
+        <div class="secound-container">
+            <a href="LockSystem.html">
+                <div class="cards card-transform">
+                   <div class="container2">
+                       <div>
+                           <h2>Intelligent Door Lock System</h2>
+                           <p>A smart door lock system with QR Code</p>
+                       </div> 
+                       <div class="state stateAnim">planning</div>  
+                    </div> 
+               </div>
+            </a> 
+        </div>
+       
+    </body>
+</html>

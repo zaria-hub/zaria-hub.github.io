@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mata name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title>Smart City Consumption</title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 900px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+            h1.name{
+                font-size:clamp(10px, 6vw, 30px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+           
+           
+         </style>
+    </head>
+   
+    <body>
+
+         <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        <div class="secound-container">
+           <h2 class="name cards">Smart City – Energy Consumption Monitoring & Anomaly Prediction Platform (Prototype) </h2>
+        </div>
+        <div>
+            <p>  
+               Designed and built a full-stack IoT-simulated smart city energy platform that models real-time energy consumption across 30 simulated entities
+               (homes, neighborhood zones, and public infrastructure), combining machine learning forecasting, 
+               MQTT-based device simulation, a REST API backend, an administrative web dashboard,
+               and a native Android consumer app with authentication and push-notification-ready alerting.
+            </p>
+            <h1>Key Features:</h1>
+            <p>
+                Time-series forecasting & anomaly detection: 
+                Trained individual Prophet models per sensor on 3 years of synthetic historical consumption data (seasonal, weekly,
+                and long-term growth patterns) to predict future usage and flag statistically abnormal growth trends using a dual-criterion approach 
+                (fixed threshold + peer-group statistical deviation), validated at 100% detection accuracy against seeded anomalies
+            </p>
+            <p>
+                Simulated IoT data pipeline over MQTT:
+                A device simulator publishes live per-sensor readings over a secure TLS MQTT connection (HiveMQ Cloud) every 15 seconds; 
+                a decoupled subscriber service consumes and persists both a full historical log and a fast-access "latest reading"
+                cache in MongoDB — architected to allow real IoT hardware to replace the simulator without touching the rest of the system
+            </p>
+            <p>
+                Centralized REST API (FastAPI): Serves live readings, ML predictions, and location metadata to the web dashboard via open endpoints, 
+                and exposes JWT-protected endpoints (/auth/login, /me, /me/device-token) scoped per-account for the mobile app, 
+                ensuring each household/institution can only access its own data
+            </p>
+            <p>
+                Admin web dashboard: Multi-page operational interface (overview, per-sensor detail, filterable sensor list, alerts feed)
+                built with vanilla HTML/CSS/JS against the REST API, featuring a custom-designed dark "control room" visual system 
+                with a growth-ratio gauge component that visualizes the model's own detection logic
+            </p>
+            <p>
+                Native Android app (Kotlin): Per-account authentication (admin-provisioned credentials, bcrypt-hashed, JWT sessions)
+                giving each household/institution a dedicated login to view only their own live consumption and forecasted growth, with auto-refresh 
+                and a review-oriented (non-punitive) anomaly notice designed to avoid false-blame on households whose usage rises for legitimate reasons
+            </p>
+            <p>
+                End-to-end systems debugging: Diagnosed and resolved a full stack of real-world integration issues across the pipeline — MongoDB/pymongo type coercion bugs, 
+                MQTT broker permission scoping, Android emulator network routing failures (resolved via ADB port forwarding), and a PyJWT package-name collision — using Logcat, 
+                server tracebacks, and layered network diagnostics (ping/nc/firewall rules)
+            </p>
+            <div class="container">
+                 <iframe 
+                     width="100%" 
+                     height="400" 
+                     src="https://www.youtube.com/embed/llumheYdWAs" 
+                     title="web dashboard for admin"
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen>
+                </iframe>
+                <h6>web dashboard</h6>
+            </div>
+             <div class="container">
+                  <iframe 
+                     width="100%" 
+                     height="400" 
+                     src="https://www.youtube.com/embed/kdlMqQpzBkY?feature=share" 
+                     title="Android app for user"
+                     frameborder="0" 
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen>
+                </iframe>
+                <h6>Android app</h6>
+            </div>
+            <h4>
+                Tech Stack: Python (FastAPI, Prophet, pymongo, paho-mqtt, bcrypt, PyJWT), MongoDB (incl. time-series collections), 
+                MQTT (HiveMQ Cloud, TLS), Kotlin (Retrofit, OkHttp, Coroutines, Android SDK), HTML/CSS/JavaScript, JWT-based authentication
+            </h4>    
+        </div>
+        
+        
+     
+        
+        
+        
+    </body>
+</html>

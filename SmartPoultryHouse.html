@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8"/>
+         <mata name="viewport" content ="width=device-width,initial-scale=1.0"/>
+         <title>No-Code AutoML</title>
+         <link rel="stylesheet" href="style.css"/>
+         <script src="script.js" defer></script>
+         <style>
+             
+            .box{
+                background: black;
+                border-style:double;
+                border-color: var(--amber);
+                border-width: 2px;
+                font-family:'Times New Roman', Times, serif;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                margin: 20px 0;
+            }
+            body{
+               
+                background: black;
+                color: var(--background-color);
+                font-family:'Segoe UI', Tahoma, sans-serif;
+            
+             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 10px 0; 
+                gap: 10px;        
+                }
+            .cards{
+                
+                border-color: blue;
+                border-style:double;
+                border-width: 3px;
+                border-radius:20px;
+                text-align:center;
+                padding :10px;
+                width: 900px;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+                color:#e8e6df;
+            }
+            .img{
+                max-width: 500px;;
+                width: 100%;
+                height: auto; 
+            }
+            .wrap{
+                max-width:1000px;
+                margin:0;
+                margin: auto;
+                padding: 0 20px;
+            }
+            h1.name{
+                font-size:clamp(10px, 6vw, 30px);
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+           
+           
+         </style>
+    </head>
+   
+    <body>
+
+        <nav>
+        <div class="a" id="menujs">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="Skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <button id="menuBtn">☰</button>
+        </nav>
+        
+        <div class="secound-container">
+           <h2 class="name cards">Smart Hen House – IoT Automation System (Prototype) </h2>
+        </div>
+        <div>
+            <p>  
+               Designed and built a physical IoT-based smart poultry farm prototype using Arduino (UNO R4 WiFi), 
+               combining hardware engineering (wiring, sensors, wooden enclosure fabrication) 
+               with embedded software and cloud connectivity to automate and monitor a hen house environment in real time.
+            </p>
+            <h1>Key Features:</h1>
+            <div class="i-box">
+            <ul>
+              <li><strong>Real-time environmental monitoring:</strong> temperature and humidity sensing (DHT22) for both indoor and outdoor conditions</li>
+              <li><strong>Automated water management:</strong> ultrasonic sensors continuously measure water trough and tank levels, automatically triggering a water pump via relay when levels drop below threshold</li>
+              <li><strong>Air quality & safety monitoring:</strong> gas sensor (MQ2) for smoke/gas detection and a flame sensor for early fire detection, HC-SR04 sensor and LED alerts (red/yellow/green status indicators)</li>
+              <li><strong>Automated ventilation:</strong> relay-controlled fan activates based on temperature/air-quality readings to regulate airflow</li>
+              <li><strong>Cloud connectivity via MQTT:</strong> device publishes live sensor data over a secure MQTT connection (TLS/SSL) to a cloud broker (EMQX), enabling remote monitoring and future dashboard/app integration</li>
+              <li><strong>Servo-based mechanism:</strong> for automated feeding or door/vent control</li>
+              <li><strong>Hands-on prototyping:</strong> custom wooden housing, breadboard circuits, and physical sensor placement demonstrating full-stack embedded systems development — from hardware assembly to firmware and cloud communication</li>
+            </ul>
+           
+            </div>
+            <div class="container">
+                <img src="images/smartpoultryhouse/realpicture.png" alt="Real picture of the smart poultry house prototype"  class="img" />
+                <h6>Real Picture of the Smart Poultry House Prototype</h6>
+                <img src="images/smartpoultryhouse/designpicture.png" alt="Design picture of the smart poultry house prototype"  class="img" />
+                <h6>Rough design</h6>
+             </div>
+            <h4><strong>Tech Stack:</strong> C++ (Arduino), WiFiS3 / WiFiSSLClient, ArduinoMqttClient, ArduinoJson, DHT Sensor Library, Servo Library, MQTT (EMQX Cloud, TLS), Ultrasonic  & Gas/Flame/temperature  Sensors, Relay Modules</h4>    
+        </div>
+        
+        
+     
+        
+        
+        
+    </body>
+</html>

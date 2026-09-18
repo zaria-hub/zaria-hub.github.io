@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>lock system </title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js" defer></script>
+        <style>
+            .g{
+                transform-box: fill-box;
+                transform-origin: center;
+
+            }
+            @keyframes flip{
+                from { transform: rotate(0deg); } 
+                to { transform: rotate(180deg); }
+            }
+            #hourglass{
+                 animation: flip 3s ease infinite; 
+            }
+           .wrap1 {
+                 background: transparent; /* أو احذف الخاصية بالكامل */
+            }
+            .bo1{
+                background: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="a" id="menujs">
+                 <a href="index.html">Home</a>
+                 <a href="Education.html">Education</a>
+                 <a href="Skills.html">Skills</a>
+                 <a href="projects.html">Projects</a>
+                 <a href="contact.html">Contact</a>  
+            </div>
+            <button id="menuBtn">☰</button>
+        </nav>
+        <div class="container">
+            <div class="hourglass">
+
+            </div>
+            <div class="wrap">
+                <svg width=100% height=100% viewBox="0 0 1000 1000" class="box1" style="max-width:250px;">
+                     <g class="g" id="hourglass">
+                         <polygon points="500,500 250,150 750,150" stroke="var(--teal2)" stroke-width="10"/>
+                         <polygon points="500,500 250,850 750,850" stroke="var(--teal2)" stroke-width="10"/>
+                         <polygon points="500,490 329,250 671,250" fill="yellow"/> 
+                         <polygon points="500,510 329,750 671,750" fill="yellow"/>
+                    </g>   
+               </svg>
+                <h3>The project is under construction.</h3>
+            </div>
+          
+        </div>
+    </body>
+</html>
