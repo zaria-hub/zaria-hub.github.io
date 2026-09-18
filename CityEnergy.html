@@ -93,38 +93,40 @@
                and a native Android consumer app with authentication and push-notification-ready alerting.
             </p>
             <h1>Key Features:</h1>
-            <p>
-                Time-series forecasting & anomaly detection: 
-                Trained individual Prophet models per sensor on 3 years of synthetic historical consumption data (seasonal, weekly,
+             <ul>
+               <li>
+                  <strong>Time-series forecasting and anomaly detection:</strong>  Trained individual Prophet models per sensor on 3 years of synthetic historical consumption data (seasonal, weekly,
                 and long-term growth patterns) to predict future usage and flag statistically abnormal growth trends using a dual-criterion approach 
                 (fixed threshold + peer-group statistical deviation), validated at 100% detection accuracy against seeded anomalies
-            </p>
-            <p>
-                Simulated IoT data pipeline over MQTT:
-                A device simulator publishes live per-sensor readings over a secure TLS MQTT connection (HiveMQ Cloud) every 15 seconds; 
+               </li>
+               <li>
+                  <strong> Simulated IoT data pipeline over MQTT:</strong>  A device simulator publishes live per-sensor readings over a secure TLS MQTT connection (HiveMQ Cloud) every 15 seconds; 
                 a decoupled subscriber service consumes and persists both a full historical log and a fast-access "latest reading"
                 cache in MongoDB — architected to allow real IoT hardware to replace the simulator without touching the rest of the system
-            </p>
-            <p>
-                Centralized REST API (FastAPI): Serves live readings, ML predictions, and location metadata to the web dashboard via open endpoints, 
+               </li>
+               <li>
+                  <strong>Centralized REST API (FastAPI):</strong> Serves live readings, ML predictions, and location metadata to the web dashboard via open endpoints, 
                 and exposes JWT-protected endpoints (/auth/login, /me, /me/device-token) scoped per-account for the mobile app, 
                 ensuring each household/institution can only access its own data
-            </p>
-            <p>
-                Admin web dashboard: Multi-page operational interface (overview, per-sensor detail, filterable sensor list, alerts feed)
+               </li>
+               <li>
+                  <strong>Admin web dashboard:</strong>   Multi-page operational interface (overview, per-sensor detail, filterable sensor list, alerts feed)
                 built with vanilla HTML/CSS/JS against the REST API, featuring a custom-designed dark "control room" visual system 
                 with a growth-ratio gauge component that visualizes the model's own detection logic
-            </p>
-            <p>
-                Native Android app (Kotlin): Per-account authentication (admin-provisioned credentials, bcrypt-hashed, JWT sessions)
+               </li>
+               <li>
+                  <strong> Native Android app (Kotlin):</strong> Per-account authentication (admin-provisioned credentials, bcrypt-hashed, JWT sessions)
                 giving each household/institution a dedicated login to view only their own live consumption and forecasted growth, with auto-refresh 
                 and a review-oriented (non-punitive) anomaly notice designed to avoid false-blame on households whose usage rises for legitimate reasons
-            </p>
-            <p>
-                End-to-end systems debugging: Diagnosed and resolved a full stack of real-world integration issues across the pipeline — MongoDB/pymongo type coercion bugs, 
+                </li>
+                <li>
+                  <strong> End-to-end systems debugging:</strong>  Diagnosed and resolved a full stack of real-world integration issues across the pipeline — MongoDB/pymongo type coercion bugs, 
                 MQTT broker permission scoping, Android emulator network routing failures (resolved via ADB port forwarding), and a PyJWT package-name collision — using Logcat, 
                 server tracebacks, and layered network diagnostics (ping/nc/firewall rules)
-            </p>
+                </li>
+              
+            </ul>
+     
             <div class="container">
                  <iframe 
                      width="100%" 
